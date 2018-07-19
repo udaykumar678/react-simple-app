@@ -18,7 +18,7 @@ const episodeSearchBar = (props) => (
                         value={props.seasonObj.sortBy}
                         onChange={event => props.onChangeHandler(event, 'sortBy')}>
                         <option value="default">Please choose one</option>
-                        <option value="name">Name</option>
+                        <option value="title">Name</option>
                         <option value="caption">Caption</option>
                     </select>
                 </div>

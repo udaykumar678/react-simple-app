@@ -7,7 +7,7 @@ const showSelect = (props) => (
                 <b>Select Shows:</b><br />
                 <select value={props.showId} className="form-control"
                      id="showSelect" onChange={props.onShowChangeHandler}>
-                            {props.shows.map(show => <option key={show.showId} 
+                            {props.shows.map((show, i) => <option key={i+5} 
                                     value={show.showId}>{show.name}
                                 </option>)}
                 </select>

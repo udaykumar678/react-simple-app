@@ -52,8 +52,14 @@ class Seasons extends Component{
             return episodes;
         }else {
             return episodes.sort((a,b) => {
-                        if(a[sortBy] < b[sortBy]) return -1;
-                        if(a[sortBy] > b[sortBy]) return 1;
+                        var nameA = a[sortBy] ? a[sortBy].toUpperCase() : ""; // ignore upper and lowercase
+                        var nameB = b[sortBy] ? b[sortBy].toUpperCase() : "";
+                        if (nameA < nameB) {
+                            return -1;
+                        }
+                        if (nameA > nameB) {
+                            return 1;
+                        }
                         return 0;
                    });
         }
